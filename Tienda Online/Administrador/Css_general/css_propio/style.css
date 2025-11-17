@@ -1,0 +1,384 @@
+/* Estilos adicionales para el banner */
+.banner {
+    width: 100%;
+    height: 600px;
+    background-image: url(../../imagenes/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px !important;
+}
+.banner h2 {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+
+}
+
+.banner h4{
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Contenedor del slider */
+.book-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Contenedor de los libros */
+.book-slider-track {
+    display: inline-block;
+    animation: scroll 5s linear infinite;
+}
+
+/* Estilo de cada libro */
+.book-slider-track img {
+    height: 200px;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+/* Animación de desplazamiento */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50.1%);
+    }
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.card, .card3 {
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: 0.3s; /* Transición suave */
+    border: 10px solid transparent; /* Borde transparente para permitir la imagen */
+    border-image: url('../../imagenes/Madera.avif') 30 round; /* Imagen de borde */
+    border-radius: 10%;
+    overflow: hidden;
+    position: relative; /* Necesario para pseudo-elemento */
+    flex: 1;
+}
+
+/* Para recortar la imagen del borde y que respete border-radius */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 25%;
+    border: 10px solid transparent;
+    border-image: url('../../imagenes/Madera.avif') 30 round;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none; /* Evita que interfiera con la interacción */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el ratón */
+}
+
+.card-img-top {
+    height: 150px; /* Ajusta la altura de la imagen */
+    width: auto; /* Asegura que la imagen se ajuste bien */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.card-body, .card3-body {
+    padding: 10px; /* Ajusta el padding para reducir el tamaño */
+}
+.card-title {
+    font-size: 1.2rem; /* Ajusta el tamaño del título */
+    text-align: center; /* Centra el título */
+}
+.card-text {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto */
+}
+
+.elemento {
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+.elemento > h2{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    color: black !important;
+}
+
+.fondo {
+    background-color: gainsboro;
+}
+/* Contenedor del slider con bordes de madera */
+.book-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Agregar la imagen de madera en los bordes superior e inferior */
+.book-slider-wrapper::before,
+.book-slider-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20px; /* Ajusta la altura de las líneas */
+    background-image: url('../../imagenes/Madera.avif'); /* Imagen de madera */
+    background-size: cover;
+    background-position: center;
+}
+
+.book-slider-wrapper::before {
+    top: 0;
+}
+
+.book-slider-wrapper::after {
+    bottom: 0;
+}
+
+/* Sección destacada con fondo de madera rotado */
+.featured-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../imagenes/Madera90.jpg') repeat;
+    background-size: auto 100%; /* Esto ajusta la imagen para que se repita verticalmente en tablas de madera */
+    background-position: center;
+    background-repeat: repeat-x; /* Esto hace que la imagen solo se repita verticalmente */
+    color: white;
+    padding: 50px 15px;
+    text-align: center;
+    border-radius: 8px;
+ 
+}
+
+.featured-section .content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.featured-section .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.featured-section .description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.featured-section .cta-button {
+    display: inline-block;
+    background-color: #ff5e5e;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-section .cta-button:hover {
+    background-color: #e94a4a;
+}
+
+@media (max-width: 768px) {
+    .featured-section .title {
+        font-size: 2rem;
+    }
+
+    .featured-section .description {
+        font-size: 1rem;
+    }
+
+    .featured-section .cta-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+/* Sección destacada 2 con fondo de ??? */
+.featured2-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../imagenes/question-mark-on-chalkboard-background-vector.jpg') repeat;
+    background-size: auto 100%; /* Esto ajusta la imagen para que se repita verticalmente en tablas de madera */
+    background-position: center;
+    background-repeat: repeat-x; /* Esto hace que la imagen solo se repita verticalmente */
+    color: white;
+    padding: 50px 15px;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+.featured2-section .content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.featured2-section .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para mejor legibilidad */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.featured2-section .description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para mejor legibilidad */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.featured2-section .cta-button {
+    display: inline-block;
+    background-color: #ff5e5e;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.featured2-section .cta-button:hover {
+    background-color: #e94a4a;
+}
+
+@media (max-width: 768px) {
+    .featured2-section .title {
+        font-size: 2rem;
+    }
+
+    .featured2-section .description {
+        font-size: 1rem;
+    }
+
+    .featured2-section .cta-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+.remarcar {
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.centrado{
+    text-align: center;
+}
+.card2 {
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: 0.3s; /* Transición suave */
+    border: 10px solid transparent; /* Borde transparente para permitir la imagen */
+    border-image: url('../../imagenes/Madera.avif') 30 round; /* Imagen de borde */
+    border-radius: 15%;
+    overflow: hidden;
+    position: relative; /* Necesario para pseudo-elemento */
+}
+
+
+/* Para recortar la imagen del borde y que respete border-radius */
+.card2::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 25%;
+    border: 10px solid transparent;
+    border-image: url('../../imagenes/Madera.avif') 30 round;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none; /* Evita que interfiera con la interacción */
+}
+
+.card2:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el ratón */
+}
+
+.card2-img-top {
+    height: 150px; /* Ajusta la altura de la imagen */
+    width: auto; /* Asegura que la imagen se ajuste bien */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.card2-body {
+    padding: 10px; /* Ajusta el padding para reducir el tamaño */
+}
+.card2-title {
+    font-size: 1.2rem; /* Ajusta el tamaño del título */
+    text-align: center; /* Centra el título */
+}
+.card2-text {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto */
+}
+.product-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado entre la imagen y la carta */
+    justify-content: center;
+}
+.book-image {
+    position: relative;
+    max-width: 250px; /* Ajusta el tamaño de la imagen */
+}
+
+.book-image img {
+    width: 100%;
+    transform: translateY(-50px); /* Hace que sobresalga de la carta */
+}
+

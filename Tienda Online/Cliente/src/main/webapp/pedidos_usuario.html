@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mis Pedidos - La Ciudad Del Libro</title>
+    <link rel="icon" type="image/ico" href="img/icono.ico" sizes="64x64">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Css_general/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./Css_general/css_propio/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="fondo">
+        <mi-menu></mi-menu>
+
+        <div class="container mt-5 elemento">
+            <h2 class="text-center mb-4">Mis Pedidos</h2>
+
+            <div class="card2 shadow-sm">
+                <div class="card2-body">
+                    <h2 class="mb-3 centrado remarcar">Historial de Pedidos</h2>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th># Pedido</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pedidoLista">
+                                <tr>
+                                    <td>12345</td>
+                                    <td>05/03/2025</td>
+                                    <td><span class="badge bg-warning">Pendiente</span></td>
+                                    <td>25.99€</td>
+                                </tr>
+                                <tr>
+                                    <td>67890</td>
+                                    <td>28/02/2025</td>
+                                    <td><span class="badge bg-success">Entregado</span></td>
+                                    <td>45.50€</td>
+                                </tr>
+                                <tr>
+                                    <td>54321</td>
+                                    <td>20/02/2025</td>
+                                    <td><span class="badge bg-danger">Cancelado</span></td>
+                                    <td>18.75€</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Botón para volver a datos_usuario.html -->
+                    <div class="text-center mt-4">
+                        <a href="datos_usuario.html" class="btn btn-primary">Volver a Mis Datos</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <mi-pie></mi-pie>
+    </div>
+
+    <script src="./js/mis-etiquetas.js"></script>
+    <script src="./Css_general/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
